@@ -1,0 +1,704 @@
+{
+	"info": {
+		"_postman_id": "12c4ecd7-66d6-47ff-b096-7073c986f36e",
+		"name": "MindedCoderApplicationBackendAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "studentCourse",
+			"item": [
+				{
+					"name": "CREATE_COURSE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseName\" : \"NextJs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/student/course/create-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"create-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_ALL_COURSE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/student/course/get-all-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"get-all-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_COURSE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\" : \"6527c38dc111c6290da4abc4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/student/course/delete-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"delete-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_COURSE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/student/course/update-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"update-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "COURSE_MAIN_TOPIC_HEADING",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN0dWRlbnQ5MGY4MDk1aUB0ZXN0LmNvbSIsIl9pZCI6IjY1MjUyZjRhYTg5YzNlZjYyZDQ4MTVkYiIsImlhdCI6MTY5NzAyMDkxMiwiZXhwIjoxNjk5NjEyOTEyfQ.UTqSQMv2IaMbcA-eCfwo-53EOpuF_kUeKPK2AyEVcN8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\" : \"6527ecf11d137ddc6b84e2f1\",\r\n    \"topicHeadingName\" : \"Introduction\",\r\n    \"topicLevel\" : \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/student/course/course-main-topic-heading",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"course-main-topic-heading"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "COURSE_SUB_TOPIC_HEADING",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN0dWRlbnQ5MGY4MDk1aUB0ZXN0LmNvbSIsIl9pZCI6IjY1MjUyZjRhYTg5YzNlZjYyZDQ4MTVkYiIsImlhdCI6MTY5NzAyMDkxMiwiZXhwIjoxNjk5NjEyOTEyfQ.UTqSQMv2IaMbcA-eCfwo-53EOpuF_kUeKPK2AyEVcN8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\" : \"6527ecf11d137ddc6b84e2f1\",\r\n    \"courseMainTopicId\" : \"6527f23aca26dd50b503287e\",\r\n    \"subTopicHeadingName\" : \"why use javascript\",\r\n    \"subTopicLevel\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/student/course/course-sub-topic-heading",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"course-sub-topic-heading"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "COURSE_SUB_TOPIC_VIDEO",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN0dWRlbnQ5MGY4MDk1aUB0ZXN0LmNvbSIsIl9pZCI6IjY1MjUyZjRhYTg5YzNlZjYyZDQ4MTVkYiIsImlhdCI6MTY5NzAyMDkxMiwiZXhwIjoxNjk5NjEyOTEyfQ.UTqSQMv2IaMbcA-eCfwo-53EOpuF_kUeKPK2AyEVcN8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "courseId",
+									"value": " 6527ecf11d137ddc6b84e2f1",
+									"type": "text"
+								},
+								{
+									"key": "courseMainTopicId",
+									"value": " 6527f23aca26dd50b503287e",
+									"type": "text"
+								},
+								{
+									"key": "courseSubTopicId",
+									"value": " 6527fdd394006859e4d2a7d2",
+									"type": "text"
+								},
+								{
+									"key": "videoHeading",
+									"value": " why use javascript",
+									"type": "text"
+								},
+								{
+									"key": "subTopicVideo",
+									"type": "file",
+									"src": "/C:/Users/Admin/Pictures/r.pptx"
+								},
+								{
+									"key": "subTopicVideoLevel",
+									"value": " 0",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/student/course/course-sub-topic-video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"course-sub-topic-video"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_COURSE_SINGLE_SUB_TOPIC",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN0dWRlbnQ5MGY4MDk1aUB0ZXN0LmNvbSIsIl9pZCI6IjY1MjUyZjRhYTg5YzNlZjYyZDQ4MTVkYiIsImlhdCI6MTY5NzAyMDkxMiwiZXhwIjoxNjk5NjEyOTEyfQ.UTqSQMv2IaMbcA-eCfwo-53EOpuF_kUeKPK2AyEVcN8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseSubTopicId\" : \"652919ae1a56b53620808654\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/student/course/get-course-sub-topic-video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"get-course-sub-topic-video"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_ALL_SUB_TOPIC_VIDEO_CONTENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/student/course/get-all-course-sub-topic-video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"get-all-course-sub-topic-video"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_MAIN_TOPIC_HEADING",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/student/course/get-course-main-topic-heading",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"get-course-main-topic-heading"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_ALL_MAIN_TOPIC_HEADING",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/student/course/get-all-course-main-topic-heading",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"get-all-course-main-topic-heading"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_COURSE_MAIN_TOPIC_HEADING",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"6527f23aca26dd50b503287e\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/student/course/delete-course-main-topic-heading",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"delete-course-main-topic-heading"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_ALL_COURSE_SUB_HEADING",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/student/course/get-all-course-sub-topic-heading",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"get-all-course-sub-topic-heading"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_COURSE_SUB_TOPIC_HEADING",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/student/course/delete-course-sub-topic-heading",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"student",
+								"course",
+								"delete-course-sub-topic-heading"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "STUDENT_REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test4@test.com\",\r\n    \"password\":\"12345\",\r\n    \"phone\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/student/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"student",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test4@test.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/student/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"student",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_ADDRESS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q0QHRlc3QuY29tIiwiX2lkIjoiNjUxZDA2MWE1ODE5MGM3MzVkZDY3ZTc2IiwiaWF0IjoxNjk2NDAxODczLCJleHAiOjE2OTg5OTM4NzN9.Xl_wZ0fSNhCuXjsQBJPPmTuf0UiBC1np9uacUP5qZuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"street\": \"Mumbai\", \r\n   \"postalCode\":\"400066\", \r\n   \"city\":\"Mumbai\",\r\n   \"country\":\"India\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/customer/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"customer",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_FORGOT_PASSWORD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q0QHRlc3QuY29tIiwiX2lkIjoiNjUxZDA2MWE1ODE5MGM3MzVkZDY3ZTc2IiwiaWF0IjoxNjk2NDAxODczLCJleHAiOjE2OTg5OTM4NzN9.Xl_wZ0fSNhCuXjsQBJPPmTuf0UiBC1np9uacUP5qZuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"developermahesh768@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/student/forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"student",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_RESET_PASSWORD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q0QHRlc3QuY29tIiwiX2lkIjoiNjUxZDA2MWE1ODE5MGM3MzVkZDY3ZTc2IiwiaWF0IjoxNjk2NDAxODczLCJleHAiOjE2OTg5OTM4NzN9.Xl_wZ0fSNhCuXjsQBJPPmTuf0UiBC1np9uacUP5qZuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"mahesh\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/student/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFqYXlAdGVzdC5jb20iLCJfaWQiOiI2NTFkMTAyZThhYzVmYWM3MDQ3Zjc2YTciLCJpYXQiOjE2OTY0OTg2MTksImV4cCI6MTY5OTA5MDYxOX0.I9F9Odq-upbdrjzYflqtzANggKTU8dXgYKatIyVsdxA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"student",
+						"reset-password"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFqYXlAdGVzdC5jb20iLCJfaWQiOiI2NTFkMTAyZThhYzVmYWM3MDQ3Zjc2YTciLCJpYXQiOjE2OTY0OTg2MTksImV4cCI6MTY5OTA5MDYxOX0.I9F9Odq-upbdrjzYflqtzANggKTU8dXgYKatIyVsdxA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_CHANGE_PASSWORD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q0QHRlc3QuY29tIiwiX2lkIjoiNjUxZDA2MWE1ODE5MGM3MzVkZDY3ZTc2IiwiaWF0IjoxNjk2NDAxODczLCJleHAiOjE2OTg5OTM4NzN9.Xl_wZ0fSNhCuXjsQBJPPmTuf0UiBC1np9uacUP5qZuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"userId\": \"651d102e8ac5fac7047f76a7\",\r\n   \"oldPassword\" : \"123456\", \r\n   \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/student/change-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"student",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REFRESH_TOKEN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : \"65213874ebb1bed6ae8e6cf3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/student/refresh-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"student",
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_LOGOUT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "12c4ecd7-66d6-47ff-b096-7073c986f36e",
+		"name": "MindedCoderApplicationBackendAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "STUDENT_REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test4@test.com\",\r\n    \"password\":\"12345\",\r\n    \"phone\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/customer/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"customer",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test4@test.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/customer/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"customer",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_ADDRESS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q0QHRlc3QuY29tIiwiX2lkIjoiNjUxZDA2MWE1ODE5MGM3MzVkZDY3ZTc2IiwiaWF0IjoxNjk2NDAxODczLCJleHAiOjE2OTg5OTM4NzN9.Xl_wZ0fSNhCuXjsQBJPPmTuf0UiBC1np9uacUP5qZuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"street\": \"Mumbai\", \r\n   \"postalCode\":\"400066\", \r\n   \"city\":\"Mumbai\",\r\n   \"country\":\"India\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/customer/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"customer",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_FORGOT_PASSWORD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q0QHRlc3QuY29tIiwiX2lkIjoiNjUxZDA2MWE1ODE5MGM3MzVkZDY3ZTc2IiwiaWF0IjoxNjk2NDAxODczLCJleHAiOjE2OTg5OTM4NzN9.Xl_wZ0fSNhCuXjsQBJPPmTuf0UiBC1np9uacUP5qZuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"developermahesh768@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/student/forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"student",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_RESET_PASSWORD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q0QHRlc3QuY29tIiwiX2lkIjoiNjUxZDA2MWE1ODE5MGM3MzVkZDY3ZTc2IiwiaWF0IjoxNjk2NDAxODczLCJleHAiOjE2OTg5OTM4NzN9.Xl_wZ0fSNhCuXjsQBJPPmTuf0UiBC1np9uacUP5qZuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"mahesh\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/student/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFqYXlAdGVzdC5jb20iLCJfaWQiOiI2NTFkMTAyZThhYzVmYWM3MDQ3Zjc2YTciLCJpYXQiOjE2OTY0OTg2MTksImV4cCI6MTY5OTA5MDYxOX0.I9F9Odq-upbdrjzYflqtzANggKTU8dXgYKatIyVsdxA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"student",
+						"reset-password"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFqYXlAdGVzdC5jb20iLCJfaWQiOiI2NTFkMTAyZThhYzVmYWM3MDQ3Zjc2YTciLCJpYXQiOjE2OTY0OTg2MTksImV4cCI6MTY5OTA5MDYxOX0.I9F9Odq-upbdrjzYflqtzANggKTU8dXgYKatIyVsdxA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT_CHANGE_PASSWORD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q0QHRlc3QuY29tIiwiX2lkIjoiNjUxZDA2MWE1ODE5MGM3MzVkZDY3ZTc2IiwiaWF0IjoxNjk2NDAxODczLCJleHAiOjE2OTg5OTM4NzN9.Xl_wZ0fSNhCuXjsQBJPPmTuf0UiBC1np9uacUP5qZuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"userId\": \"651d102e8ac5fac7047f76a7\",\r\n   \"oldPassword\" : \"123456\", \r\n   \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/student/change-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"student",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
